@@ -9,6 +9,10 @@ public class Conta {
     private double saldo;
     private List<Transacao> transacoes;
 
+    public Conta() {
+
+    }
+
     public Conta(String agencia, String banco, String numeroConta) {
         this.agencia = agencia;
         this.banco = banco;
@@ -16,6 +20,22 @@ public class Conta {
         this.saldo = 0;
         this.transacoes = new ArrayList<>();
     }
+
+    public void imprimeExtrato() {
+        for (int i = 0; i <= transacoes.size(); i++) {
+            double saldoFinal = 0;
+            if (transacoes.get(i).getTipo().equals("Receita")) {
+                saldoFinal = this.getSaldo() + transacoes.get(i).getValor();
+            } else if (transacoes.get(i).getTipo().equals("Despesa")) {
+                saldoFinal = this.getSaldo() - transacoes.get(i).getValor();
+            }
+            this.saldo = saldoFinal;
+
+            System.out.println(transacoes.get(i).toString() +
+                    "| Saldo Final: " + transacoes.get(i) );
+        }
+    }
+
 
     public String getAgencia() {
         return agencia;
@@ -53,7 +73,13 @@ public class Conta {
         return transacoes;
     }
 
-    public void setTransacoes(List<Transacao> transacoes) {
-        this.transacoes = transacoes;
+    public void setTransacoes(Transacao transacao) {
+        this.transacoes.add(transacao);
+        if (transacao.getTipo().equalsIgnoreCase("receita")) {
+            setSaldo(getSaldo() + transacao.getValor());
+        } else {
+            setSaldo(getSaldo() - transacao.getValor());
+        }
     }
+
 }
