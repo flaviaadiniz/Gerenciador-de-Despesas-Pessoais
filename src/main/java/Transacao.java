@@ -3,12 +3,12 @@ import java.time.LocalDate;
 public class Transacao {
 
     private LocalDate data;
-    private TipoTransacao tipo;
+    private String tipo;
     private String categoria;
     private String descricao;
     private double valor;
 
-    public Transacao(LocalDate data, TipoTransacao tipo, String categoria, String descricao, double valor) {
+    public Transacao(LocalDate data, String tipo, String categoria, String descricao, double valor) {
         this.data = data;
         this.tipo = tipo;
         this.categoria = categoria;
@@ -24,11 +24,11 @@ public class Transacao {
         this.data = data;
     }
 
-    public TipoTransacao getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoTransacao tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
@@ -56,4 +56,14 @@ public class Transacao {
         this.valor = valor;
     }
 
+    @Override
+    public String toString() {
+        return "TRANSAÇÃO - " +
+                "| Data: " + data +
+                "| Tipo: " + tipo +
+                "| Categoria: " + categoria + '\'' +
+                "| Descrição: " + descricao + '\'' +
+                "| Valor: " + valor +
+                ' ';
+    }
 }
