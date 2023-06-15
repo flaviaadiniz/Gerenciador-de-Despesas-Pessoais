@@ -22,17 +22,17 @@ public class Conta {
     }
 
     public void imprimeExtrato() {
-        for (int i = 0; i <= transacoes.size(); i++) {
-            double saldoFinal = 0;
-            if (transacoes.get(i).getTipo().equals("Receita")) {
-                saldoFinal = this.getSaldo() + transacoes.get(i).getValor();
-            } else if (transacoes.get(i).getTipo().equals("Despesa")) {
-                saldoFinal = this.getSaldo() - transacoes.get(i).getValor();
-            }
-            this.saldo = saldoFinal;
+        System.out.println(this);
+    }
 
-            System.out.println(transacoes.get(i).toString() +
-                    "| Saldo Final: " + transacoes.get(i) );
+    public void mesclarContas(Conta conta1, Conta conta2) {
+        for (Transacao t : conta2.getTransacoes()) {
+            conta1.setTransacoes(t);
+        }
+
+        System.out.println("Lista de transações das duas contas:");
+        for (Transacao t : conta1.getTransacoes()) {
+            System.out.println(t);
         }
     }
 
@@ -76,10 +76,19 @@ public class Conta {
     public void setTransacoes(Transacao transacao) {
         this.transacoes.add(transacao);
         if (transacao.getTipo().equalsIgnoreCase("receita")) {
-            setSaldo(getSaldo() + transacao.getValor());
+            this.setSaldo(getSaldo() + transacao.getValor());
         } else {
-            setSaldo(getSaldo() - transacao.getValor());
+            this.setSaldo(getSaldo() - transacao.getValor());
         }
     }
 
+    @Override
+    public String toString() {
+        return "CONTA - " +
+                "Agência: " + agencia +
+                " | Banco: " + banco +
+                " | Número da Conta: " + numeroConta +
+                " | Saldo: " + saldo +
+                " | Transações: " + transacoes;
+    }
 }
