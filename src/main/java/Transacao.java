@@ -58,12 +58,12 @@ public class Transacao {
 
     @Override
     public String toString() {
-        return "TRANSAÇÃO - " +
+        return "[ TRANSAÇÃO - " +
                 "| Data: " + data +
-                "| Tipo: " + tipo +
-                "| Categoria: " + categoria + '\'' +
-                "| Descrição: " + descricao + '\'' +
-                "| Valor: " + valor +
-                ' ';
+                " | Tipo: " + tipo +
+                " | Categoria: " + categoria +
+                " | Descrição: " + descricao +
+                " | Valor: " + valor +
+                " ] \n";
     }
 }
