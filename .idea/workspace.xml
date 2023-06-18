@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b50b602-3fc7-4281-bf5f-8b8fa05a52dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Conta.java" afterDir="false" />
+    <list default="true" id="3b50b602-3fc7-4281-bf5f-8b8fa05a52dd" name="Changes" comment="Ajuste no método toString para melhor visualização">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -38,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,8 +55,75 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686611745174</updated>
-      <workItem from="1686611748642" duration="1493000" />
+      <workItem from="1686611748642" duration="10688000" />
+      <workItem from="1686748688652" duration="10164000" />
+      <workItem from="1686777889414" duration="953000" />
+      <workItem from="1686831851468" duration="1991000" />
     </task>
+    <task id="LOCAL-00001" summary="Primeiro Commit">
+      <created>1686652235774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686652235775</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adição das classes Transacao e TipoTransacao com construtores, getters &amp; setters">
+      <created>1686700850911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686700850911</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adição de 2 novos atributos, construtor, getters &amp; setters na classe Conta">
+      <created>1686700933888</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686700933888</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adição de construtor vazio, método imprimeExtrato e ajuste no método setTransacoes">
+      <created>1686749027407</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686749027407</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adição do método toString na classe Transacao">
+      <created>1686749066665</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686749066665</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Mudança de TipoTransacao de Enum para String">
+      <created>1686749119719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686749119719</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ajustes no método imprimeExtrato e adição do método toString">
+      <created>1686833622608</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686833622608</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adição da classe Gerenciador com o método Main">
+      <created>1686833655425</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686833655425</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ajuste no método toString para melhor visualização">
+      <created>1686833705965</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686833705965</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,5 +139,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primeiro Commit" />
+    <MESSAGE value="Adição das classes Transacao e TipoTransacao com construtores, getters &amp; setters" />
+    <MESSAGE value="Adição de 2 novos atributos, construtor, getters &amp; setters na classe Conta" />
+    <MESSAGE value="Adição de construtor vazio, método imprimeExtrato e ajuste no método setTransacoes" />
+    <MESSAGE value="Adição do método toString na classe Transacao" />
+    <MESSAGE value="Mudança de TipoTransacao de Enum para String" />
+    <MESSAGE value="Ajustes no método imprimeExtrato e adição do método toString" />
+    <MESSAGE value="Adição da classe Gerenciador com o método Main" />
+    <MESSAGE value="Ajuste no método toString para melhor visualização" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste no método toString para melhor visualização" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
