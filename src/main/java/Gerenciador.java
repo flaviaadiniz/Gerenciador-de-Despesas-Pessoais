@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +80,7 @@ public class Gerenciador {
                         contas.add(criarConta());
 
                     } else if (opcaoConta == 2) {
-                        System.out.println("ATENÇÃO! Todos os dados da conta serão deletados! Deseja prosseguir?");
+                        System.out.println("ATENÇÃO! Todos os dados da conta serão removidos! Deseja prosseguir?");
                         System.out.print("Digite S (sim) ou N (não): ");
                         String decisao = scanner.nextLine();
                         if (decisao.equalsIgnoreCase("S")) {
@@ -131,7 +130,7 @@ public class Gerenciador {
                     }
 
                     System.out.println("Digite 1 para ver o extrato da conta.");
-                    System.out.println("Digite 2 para incluir uma transação");
+                    System.out.println("Digite 2 para incluir uma transação.");
                     System.out.println("Digite 3 para editar a última transação realizada.");
                     System.out.println("Digite 4 para transferir fundos.");
                     int opcaoTransacao = scanner.nextInt();
@@ -219,7 +218,6 @@ public class Gerenciador {
                     }
             }
 
-
         } while (opcao != 4);
 
         scanner.close();
@@ -236,7 +234,6 @@ public class Gerenciador {
         String numConta = scanner.nextLine();
         System.out.println("Conta criada com sucesso!");
         return new Conta(banco, agencia, numConta);
-
     }
 
 }
