@@ -22,7 +22,12 @@ public class Conta {
     }
 
     public void imprimeExtrato() {
-        System.out.println(this);
+        if (this.getTransacoes() != null) {
+            System.out.println(this.getTransacoes());
+        } else {
+            System.out.println("Não há transações registradas!");
+        }
+
     }
 
     public void mesclarContas(Conta conta1, Conta conta2) {
@@ -34,6 +39,8 @@ public class Conta {
         for (Transacao t : conta1.getTransacoes()) {
             System.out.println(t);
         }
+
+        conta2.transacoes = null;
     }
 
 
@@ -74,12 +81,16 @@ public class Conta {
     }
 
     public void setTransacoes(Transacao transacao) {
-        this.transacoes.add(transacao);
-        if (transacao.getTipo().equalsIgnoreCase("receita")) {
-            this.setSaldo(getSaldo() + transacao.getValor());
-        } else {
-            this.setSaldo(getSaldo() - transacao.getValor());
+
+        if (transacao != null) {
+            if (transacao.getTipo().equalsIgnoreCase("receita")) {
+                this.setSaldo(getSaldo() + transacao.getValor());
+            } else if (transacao.getTipo().equalsIgnoreCase("despesa")){
+                this.setSaldo(getSaldo() - transacao.getValor());
+            }
+            this.transacoes.add(transacao);
         }
+
     }
 
     @Override
