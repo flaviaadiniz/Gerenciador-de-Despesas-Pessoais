@@ -60,7 +60,7 @@ public class Gerenciador {
         do {
 
             System.out.println("\nBem vinda ao gerenciador de despesas pessoais!");
-            System.out.println("Digite o número da opção desejada:");
+            System.out.println("Digite o número da opção desejada: ");
             System.out.println("1 - GERENCIAR CONTAS");
             System.out.println("2 - GERENCIAR TRANSAÇÕES");
             System.out.println("3 - PAINEL GERAL");
@@ -98,18 +98,18 @@ public class Gerenciador {
                         Conta conta1 = new Conta();
                         System.out.print("Digite o número da primeira conta a mesclar: ");
                         String numConta1 = scanner.nextLine();
-                        for (int i = 0; i < contas.size(); i++) {
-                            if (contas.get(i).getNumeroConta().equals(numConta1)) {
-                                conta1 = contas.get(i);
+                        for (Conta conta : contas) {
+                            if (conta.getNumeroConta().equals(numConta1)) {
+                                conta1 = conta;
                             }
                         }
 
                         Conta conta2 = new Conta();
                         System.out.print("Digite o número da segunda conta a mesclar: ");
                         String numConta2 = scanner.nextLine();
-                        for (int i = 0; i < contas.size(); i++) {
-                            if (contas.get(i).getNumeroConta().equals(numConta2)) {
-                                conta2 = contas.get(i);
+                        for (Conta conta : contas) {
+                            if (conta.getNumeroConta().equals(numConta2)) {
+                                conta2 = conta;
                             }
                         }
 
