@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +15,7 @@ public class Gerenciador {
         int opcao;
 
         contas.add(new Conta("9876", "Santander", "123"));
-        contas.get(0).setTransacoes(new Transacao(LocalDate.parse("2023-02-05"), "receita",
+        contas.get(0).setTransacoes(new Transacao(LocalDate.parse("2023-01-05"), "receita",
                 "Salário", "Salário de fevereiro", 4500));
         contas.get(0).setTransacoes(new Transacao(LocalDate.parse("2023-02-07"), "despesa",
                 "Academia", "Academia de fevereiro", 297));
@@ -35,7 +37,7 @@ public class Gerenciador {
                 "Cinema", "Cinema em junho", 60));
 
         contas.add(new Conta("9876", "Santander", "234"));
-        contas.get(1).setTransacoes(new Transacao(LocalDate.parse("2023-02-05"), "receita",
+        contas.get(1).setTransacoes(new Transacao(LocalDate.parse("2023-01-05"), "receita",
                 "Salário", "Salário de fevereiro", 6500));
         contas.get(1).setTransacoes(new Transacao(LocalDate.parse("2023-02-07"), "despesa",
                 "Academia", "Academia de fevereiro", 400));
@@ -183,7 +185,7 @@ public class Gerenciador {
 
                     if (!contas.isEmpty()) {
                         for (Conta c : contas) {
-                            System.out.println("Conta: " + c.getNumeroConta() + " | Saldo: R$" + c.getSaldo());
+                            System.out.println("Conta: " + c.getNumeroConta() + " | Saldo Atual: R$" + c.getSaldo());
                             saldoTotal += c.getSaldo();
                         }
 
@@ -209,9 +211,24 @@ public class Gerenciador {
                         }
                         System.out.println("Total de Despesas do mês atual: R$" + totalDespesa);
 
-                        /*System.out.println("SALDO GERAL DOS ÚLTIMOS 6 MESES");
-                        for (int i = 0; i < 6; i++) {
-                        }*/
+                        //Revisar esta parte
+                        System.out.println("SALDO GERAL DOS ÚLTIMOS 6 MESES: ");
+                        double saldoSeisMeses = 0;
+                        LocalDate currentDate = LocalDate.now();
+                        LocalDate beginingDate = currentDate.minusMonths(6);
+
+                        for (Conta c : contas) {
+                            for (Transacao t : c.getTransacoes()) {
+                                if (t.getData().isAfter(beginingDate)) {
+                                    if (t.getTipo().equalsIgnoreCase("receita")) {
+                                        saldoSeisMeses += t.getValor();
+                                    } else {
+                                        saldoSeisMeses -= t.getValor();
+                                    }
+                                }
+                            }
+                            System.out.println("Conta: " + c.getNumeroConta() + " | R$"+ saldoSeisMeses);
+                        }
 
                     } else {
                         System.out.println("Não há contas registradas!");
