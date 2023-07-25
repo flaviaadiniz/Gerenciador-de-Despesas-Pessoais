@@ -1,6 +1,4 @@
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -212,9 +210,8 @@ public class Gerenciador {
                         }
                         System.out.println("Total de Despesas do mês atual: R$" + totalDespesa);
 
-                        //Revisar esta parte
                         System.out.println("\nSALDO GERAL DOS ÚLTIMOS 6 MESES: ");
-                        double saldoSeisMeses = 0;
+                        double saldoUltimosSeisMeses = 0;
                         LocalDate currentDate = LocalDate.now();
                         LocalDate beginingDate = currentDate.minusMonths(6);
 
@@ -222,14 +219,14 @@ public class Gerenciador {
                             for (Transacao t : c.getTransacoes()) {
                                 if (t.getData().isAfter(beginingDate)) {
                                     if (t.getTipo().equalsIgnoreCase("receita")) {
-                                        saldoSeisMeses += t.getValor();
+                                        saldoUltimosSeisMeses += t.getValor();
                                     } else {
-                                        saldoSeisMeses -= t.getValor();
+                                        saldoUltimosSeisMeses -= t.getValor();
                                     }
                                 }
                             }
                             System.out.println("Conta: " + c.getNumeroConta() + " | Balanço de todas as transações dos últimos" +
-                                    " 6 meses: R$"+ saldoSeisMeses);
+                                    " 6 meses: R$"+ saldoUltimosSeisMeses);
                         }
 
                     } else {
@@ -238,6 +235,7 @@ public class Gerenciador {
             }
 
         } while (opcao != 4);
+        System.out.println("Encerrando o programa...");
 
         scanner.close();
     }
