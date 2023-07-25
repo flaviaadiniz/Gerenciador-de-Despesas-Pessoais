@@ -189,6 +189,7 @@ public class Gerenciador {
                             saldoTotal += c.getSaldo();
                         }
 
+                        //Revisar esta parte (imprimir total de receitas e despesas separado por conta)
                         double totalReceita = 0;
                         for (Conta c : contas) {
                             for (Transacao t : c.getTransacoes()) {
@@ -212,7 +213,7 @@ public class Gerenciador {
                         System.out.println("Total de Despesas do mês atual: R$" + totalDespesa);
 
                         //Revisar esta parte
-                        System.out.println("SALDO GERAL DOS ÚLTIMOS 6 MESES: ");
+                        System.out.println("\nSALDO GERAL DOS ÚLTIMOS 6 MESES: ");
                         double saldoSeisMeses = 0;
                         LocalDate currentDate = LocalDate.now();
                         LocalDate beginingDate = currentDate.minusMonths(6);
@@ -227,7 +228,8 @@ public class Gerenciador {
                                     }
                                 }
                             }
-                            System.out.println("Conta: " + c.getNumeroConta() + " | R$"+ saldoSeisMeses);
+                            System.out.println("Conta: " + c.getNumeroConta() + " | Balanço de todas as transações dos últimos" +
+                                    " 6 meses: R$"+ saldoSeisMeses);
                         }
 
                     } else {
