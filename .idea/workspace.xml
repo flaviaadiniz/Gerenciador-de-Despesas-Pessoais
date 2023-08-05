@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b50b602-3fc7-4281-bf5f-8b8fa05a52dd" name="Changes" comment="Ajuste no método toString para melhor visualização">
+    <list default="true" id="3b50b602-3fc7-4281-bf5f-8b8fa05a52dd" name="Changes" comment="Pequena modificação na forma de imprimir os dados, refatoração da variável do saldo dos últimos 6 meses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ffdin/IdeaProjects/dslist&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -59,6 +60,14 @@
       <workItem from="1686748688652" duration="10164000" />
       <workItem from="1686777889414" duration="953000" />
       <workItem from="1686831851468" duration="1991000" />
+      <workItem from="1687095621578" duration="325000" />
+      <workItem from="1687195055300" duration="4985000" />
+      <workItem from="1687699688561" duration="1325000" />
+      <workItem from="1688071831079" duration="2209000" />
+      <workItem from="1688417489681" duration="1736000" />
+      <workItem from="1688664856533" duration="1796000" />
+      <workItem from="1689032660641" duration="1170000" />
+      <workItem from="1690245130356" duration="8461000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <created>1686652235774</created>
@@ -123,7 +132,56 @@
       <option name="project" value="LOCAL" />
       <updated>1686833705965</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Atualização do workspace.xml">
+      <created>1687095758264</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687095758264</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Pequenos ajustes em textos">
+      <created>1687095935878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687095935878</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ajustes nos métodos imprime extrato (para avisar quando não á transações) e no método mesclar contas (para deletar as transações da conta 2 quando ela é mesclada com a conta 1)">
+      <created>1687205663609</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687205663609</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Mudança de dois métodos for por forEach">
+      <created>1688074027154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688074027154</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adição da lógica para exibir saldo geral dos últimos 6 meses de cada conta">
+      <created>1690246824425</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690246824425</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Pequena modificação na forma de imprimir os dados">
+      <created>1690247114307</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690247114307</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Pequena modificação na forma de imprimir os dados, refatoração da variável do saldo dos últimos 6 meses">
+      <created>1690326642180</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690326642180</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +208,15 @@
     <MESSAGE value="Ajustes no método imprimeExtrato e adição do método toString" />
     <MESSAGE value="Adição da classe Gerenciador com o método Main" />
     <MESSAGE value="Ajuste no método toString para melhor visualização" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste no método toString para melhor visualização" />
+    <MESSAGE value="Atualização do workspace.xml" />
+    <MESSAGE value="Pequenos ajustes em textos" />
+    <MESSAGE value="Ajustes nos métodos imprime extrato (para avisar quando não á transações) e no método mesclar contas (para deletar as transações da conta 2 quando ela é mesclada com a conta 1)" />
+    <MESSAGE value="Mudança de dois métodos for por forEach" />
+    <MESSAGE value="Adição da lógica para exibir saldo geral dos últimos 6 meses de cada conta" />
+    <MESSAGE value="Pequena modificação na forma de imprimir os dados" />
+    <MESSAGE value="Pequena modificação na forma de imprimir os dados, refatoração de variável" />
+    <MESSAGE value="Pequena modificação na forma de imprimir os dados, refatoração da variável do saldo dos últimos 6 meses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequena modificação na forma de imprimir os dados, refatoração da variável do saldo dos últimos 6 meses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
