@@ -185,32 +185,27 @@ public class Gerenciador {
                         for (Conta c : contas) {
                             System.out.println("Conta: " + c.getNumeroConta() + " | Saldo Atual: R$" + c.getSaldo());
                             saldoTotal += c.getSaldo();
-                        }
 
-                        //Revisar esta parte (imprimir total de receitas e despesas separado por conta)
-                        double totalReceita = 0;
-                        for (Conta c : contas) {
+                            double totalReceita = 0;
                             for (Transacao t : c.getTransacoes()) {
                                 if (t.getTipo().equalsIgnoreCase("receita") &&
                                         t.getData().getMonth().equals(LocalDate.now().getMonth())) {
                                     totalReceita += t.getValor();
                                 }
                             }
-                        }
-                        System.out.println("Total de Receitas do mês atual: R$" + totalReceita);
+                            System.out.println("Total de Receitas do mês atual: R$" + totalReceita);
 
-                        double totalDespesa = 0;
-                        for (Conta c : contas) {
+                            double totalDespesa = 0;
                             for (Transacao t : c.getTransacoes()) {
                                 if (t.getTipo().equalsIgnoreCase("despesa") &&
                                         t.getData().getMonth().equals(LocalDate.now().getMonth())) {
                                     totalDespesa += t.getValor();
                                 }
                             }
+                            System.out.println("Total de Despesas do mês atual: R$" + totalDespesa + "\n");
                         }
-                        System.out.println("Total de Despesas do mês atual: R$" + totalDespesa);
 
-                        System.out.println("\nSALDO GERAL DOS ÚLTIMOS 6 MESES: ");
+                        System.out.println("SALDO GERAL DOS ÚLTIMOS 6 MESES: ");
                         double saldoUltimosSeisMeses = 0;
                         LocalDate currentDate = LocalDate.now();
                         LocalDate beginingDate = currentDate.minusMonths(6);
